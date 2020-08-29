@@ -27,6 +27,7 @@ Route::group(
 
 
          Route::get('/','DashboardController@index')->name('admin.dashboard');
+         Route::get('logout','LoginController@logout')->name('admin.logout');
 
          Route::group(['prefix' =>'settings' ],function(){
 
