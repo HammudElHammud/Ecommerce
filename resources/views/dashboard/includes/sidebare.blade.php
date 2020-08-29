@@ -1573,9 +1573,9 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">الاعدادات </span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">{{__('admin/sidebar.settings')}} </span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">وساىْل التوصيل  </a>
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{__('admin/sidebar.shopping method')}}  </a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="{{route('edit.Shipping.methods','free')}}" data-i18n="nav.templates.vert.classic_menu">توصيل مجاني</a>
                             </li>
