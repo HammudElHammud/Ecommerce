@@ -31,7 +31,7 @@ Route::group(
          Route::group(['prefix' =>'settings' ],function(){
 
            Route::get('shipping-method/{type}','SettingController@editShoppingMethod')->name('edit.Shipping.methods');
-           Route::put('shipping-method/{id}','SettingController@updateShoppingMethod')->name('update.Shipping.methods');
+           Route::PUT('shipping-method/{id}','SettingController@updateShoppingMethod')->name('update.Shipping.methods');
 
     });
 
