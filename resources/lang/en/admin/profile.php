@@ -13,11 +13,18 @@ return [
     |
     */
 
-    'settings' => 'الاعدادات',
-    'shopping method' => 'وساىْل التوصيل ',
-    'free shipping' => 'توصيل  مجاني',
-    'local shipping' => 'توصيل محلي ',
-    'outer shipping' => ' توصيل خارجي'
+    'main' => 'Main',
+    'profile' => 'Profile',
+    'edit profile' => 'edit Profile',
+    'name' => 'Name',
+    'password' => 'Password',
+    'email' => 'Email',
+    'email required' => 'The email is required',
+    'email email' => 'The email is   not email',
+    'name required' => 'The name is required',
+    'password required' => 'The name is required',
+
+
 
 
 

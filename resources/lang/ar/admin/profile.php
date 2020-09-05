@@ -13,10 +13,15 @@ return [
     |
     */
 
-    'settings' => 'الاعدادات',
-    'shopping method' => 'وساىْل التوصيل ',
-    'free shipping' => 'توصيل  مجاني',
-    'local shipping' => 'توصيل محلي ',
+    'main' => 'الرئيسية',
+    'profile' => 'الملف الشخصي  ',
+    'name' => 'الاسم  ',
+    'password' => 'الشيفرة',
+    'email' => 'الأميل',
+    'edit profile' => 'تعديل بيانات الملف الشخصي',
+    'email required' => '   البريد الإلكتروني مطلوب. ',
+    'name required' => '   الاسم  مطلوب. ',
+    'password required' => 'الشيفرة مطلوب. ',
     'outer shipping' => ' توصيل خارجي'
 
 

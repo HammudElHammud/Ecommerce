@@ -11,6 +11,6 @@ class Admin extends Authenticatable
     use Notifiable;
    protected $table ="admins";
    protected $guarded = [];
-   public $timestamps = true;
+   public $timestamps = false;
 
 }
