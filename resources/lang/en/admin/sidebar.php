@@ -15,6 +15,9 @@ return [
 
     'settings' => 'Settings',
     'shopping method' => 'Shopping Method',
+    'free shipping' => 'Free Shopping',
+    'local shipping' => 'Local Shopping',
+    'outer shipping' => 'Outer Shopping',
 
 
 

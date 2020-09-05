@@ -159,7 +159,7 @@
                   <span class="user-name text-bold-700">{{Auth('admin')->user()->name }}</span>
                 </span>
                             <span class="avatar avatar-online">
-                  <img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
+{{--                  <img src="../../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>--}}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="ft-user"></i> Edit Profile</a>
                             <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
@@ -169,11 +169,17 @@
                         </div>
                     </li>
                     <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown"
-                                                                       aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
-                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
-                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
-                            <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
+                                                                       aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"> {{__('admin/header.languages')}}</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-flag">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                {{ $properties['native'] }}
+                               </a>
+
+                            @endforeach
+
+
                         </div>
                     </li>
                     <li class="dropdown dropdown-notification nav-item">

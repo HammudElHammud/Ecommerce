@@ -13,11 +13,7 @@ return [
     |
     */
 
-    'settings' => 'الاعدادات',
-    'shopping method' => 'وساىْل التوصيل ',
-    'free shipping' => 'توصيل  مجاني',
-    'local shipping' => 'توصيل محلي ',
-    'outer shipping' => ' توصيل خارجي'
+    'languages' => 'Languages',
 
 
 
