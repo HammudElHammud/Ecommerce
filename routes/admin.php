@@ -53,6 +53,17 @@ Route::group(
             Route::get('changeStatus/{id}','MainCategoriesController@changeStatus') -> name('admin.maincategories.status');
 
         });
+        ######################### Begin Main Categoreis Routes ########################
+        Route::group(['prefix' => 'brands'], function () {
+            Route::get('/','BrandsController@index') -> name('admin.brands');
+            Route::get('create','BrandsController@create') -> name('admin.brands.create');
+            Route::post('store','BrandsController@store') -> name('admin.brands.store');
+            Route::get('edit/{id}','BrandsController@edit') -> name('admin.brands.edit');
+            Route::post('update/{id}','BrandsController@update') -> name('admin.brands.update');
+            Route::get('delete/{id}','BrandsController@destroy') -> name('admin.brands.delete');
+            Route::get('changeStatus/{id}','BrandsController@changeStatus') -> name('admin.brands.status');
+
+        });
         ######################### End  Main Categoris Routes  ########################
 
         Route::group(['prefix' => 'Sub_categories'], function () {

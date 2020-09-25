@@ -1582,6 +1582,15 @@
                     </li>
                 </ul>
             </li>
+            <li class=" nav-item"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">{{__('admin/bands.band')}}</span><span class="badge badge badge-info badge-pill float-right mr-2">{{\App\Models\Category::Child()->count()}}</span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="{{url('admin/Sub_categories')}}" data-i18n="nav.dash.ecommerce">{{__('admin/bands.allBands')}}</a>
+                    </li>
+                    <li class="active"><a class="menu-item" href="{{url('/admin/Sub_categories/create')}}" data-i18n="nav.dash.crypto">{{__('admin/bands.addBand')}}</a>
+                    </li>
+                    </li>
+                </ul>
+            </li>
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">{{__('admin/sidebar.settings')}} </span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{__('admin/sidebar.shopping method')}}  </a>
@@ -1595,11 +1604,34 @@
 
                         </ul>
                     </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">{{__('admin/bands.band')}}</a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
+                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">{{__('admin/bands.allBand')}}</a>
                             </li>
-                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
+                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">{{__('admin/bands.addBand')}} </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">{{__('admin/sidebar.settings')}} </span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">{{__('admin/sidebar.shopping method')}}  </a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="{{route('edit.Shipping.methods','free')}}" data-i18n="nav.templates.vert.classic_menu">{{__('admin/sidebar.free shipping')}}</a>
+                            </li>
+                            <li><a class="menu-item" href="{{route('edit.Shipping.methods','inner')}}"> {{__('admin/sidebar.local shipping')}}</a>
+                            </li>
+                            <li><a class="menu-item" href="{{route('edit.Shipping.methods','outer')}}" data-i18n="nav.templates.vert.compact_menu">{{__('admin/sidebar.outer shipping')}}</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">{{__('admin/bands.band')}}</a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">{{__('admin/bands.allBand')}}</a>
+                            </li>
+                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">{{__('admin/bands.addBand')}} </a>
                             </li>
                         </ul>
                     </li>

@@ -19,6 +19,7 @@ return [
     'all sections' => ' All Sections',
     'sub all sections' => ' All Sub Sections',
     'name' => ' Name',
+    'updateSuccess' => 'The Information Updated Successfully',
     'nameSection' => ' Name Section',
     'data' => ' Department Data',
     'nameLink' => 'Name with the link',
@@ -40,8 +41,9 @@ return [
     'addSubSection' => 'Add Sub Section',
     'selectSection' => 'Select Section',
     'pleaseSelect' => 'Please Select Section',
-
-
+    'main.nameRequired' => 'The Name file is required',
+    'main.slugRequired' => 'The Slug file is required ',
+    'main.slugUnique' => 'The Slug must be unique',
 
 
 

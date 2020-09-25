@@ -11,9 +11,9 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="">{{__('admin/main.main')}} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> {{__('admin/main.main sections')}} </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">{{__('admin/main.main sections')}} </a>
                                 </li>
-                                <li class="breadcrumb-item active">{{__('admin/main.edit')}} - {{__('admin/main.name')}}
+                                <li class="breadcrumb-item active">{{__('admin/main.addNowSection')}}
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/main.main sections')}} / {{__('admin/main.edit')}} </h4>
+                                    <h4 class="card-title" id="basic-layout-form">{{__('admin/main.addNowSection')}} </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -44,20 +44,11 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.maincategories.update',$category -> id)}}"
+                                              action="{{route('admin.maincategories.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
 
-                                            <input name="id" value="{{$category -> id}}" type="hidden">
-
-                                            <div class="form-group">
-                                                <div class="text-center">
-                                                    <img
-                                                        src=""
-                                                        class="rounded-circle  height-150" alt="{{__('admin/main.image')}}   ">
-                                                </div>
-                                            </div>
 
 
                                             <div class="form-group">
@@ -82,7 +73,7 @@
                                                             <input type="text" id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{$category -> name}}"
+                                                                   value="{{old('name')}}"
                                                                    name="name">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
@@ -97,7 +88,7 @@
                                                             <input type="text" id="name"
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{$category -> slug}}"
+                                                                   value="{{old('slug')}}"
                                                                    name="slug">
                                                             @error("slug")
                                                             <span class="text-danger">{{$message}}</span>
@@ -117,7 +108,7 @@
                                                                    name="is_active"
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
-                                                                   @if($category -> is_active == 1)checked @endif/>
+                                                                   checked />
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1">{{__('admin/main.status')}}  </label>
 
@@ -133,7 +124,7 @@
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">
-                                                    <i class="ft-x"></i> {{__('admin/main.back')}}
+                                                    <i class="ft-x"></i>{{__('admin/main.back')}}
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="la la-check-square-o"></i> {{__('admin/main.update')}}
