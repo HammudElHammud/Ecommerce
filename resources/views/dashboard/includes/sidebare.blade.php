@@ -1582,11 +1582,20 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">{{__('admin/bands.band')}}</span><span class="badge badge badge-info badge-pill float-right mr-2">{{\App\Models\Category::Child()->count()}}</span></a>
+            <li class=" nav-item"><a href=""><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">{{__('admin/bands.band')}}</span><span class="badge badge badge-info badge-pill float-right mr-2"></span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="{{url('admin/Sub_categories')}}" data-i18n="nav.dash.ecommerce">{{__('admin/bands.allBands')}}</a>
+                    <li><a class="menu-item" href="{{url('admin/brands')}}" data-i18n="nav.dash.ecommerce">{{__('admin/bands.allBands')}}</a>
                     </li>
-                    <li class="active"><a class="menu-item" href="{{url('/admin/Sub_categories/create')}}" data-i18n="nav.dash.crypto">{{__('admin/bands.addBand')}}</a>
+                    <li class="active"><a class="menu-item" href="{{url('/admin/brands/create')}}" data-i18n="nav.dash.crypto">{{__('admin/bands.addBand')}}</a>
+                    </li>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href=""><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">{{__('admin/tags.tag')}}</span><span class="badge badge badge-info badge-pill float-right mr-2"></span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="{{url('admin/tags')}}" data-i18n="nav.dash.ecommerce">{{__('admin/tags.alltags')}}</a>
+                    </li>
+                    <li class="active"><a class="menu-item" href="{{url('/admin/tags/create')}}" data-i18n="nav.dash.crypto">{{__('admin/tags.addTag')}}</a>
                     </li>
                     </li>
                 </ul>

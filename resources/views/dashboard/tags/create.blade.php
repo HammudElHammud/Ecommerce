@@ -9,11 +9,11 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="">{{__('admin/bands.main')}}  </a>
+                                <li class="breadcrumb-item"><a href="">{{__('admin/tags.main')}}  </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href="{{route('admin.brands')}}"> {{__('admin/bands.CommercialBrands')}}  </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.tags')}}"> {{__('admin/tags.CommercialBrands')}}  </a>
                                 </li>
-                                <li class="breadcrumb-item active"> {{__('admin/bands.CommercialBrands')}}
+                                <li class="breadcrumb-item active"> {{__('admin/tags.CommercialBrands')}}
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/bands.addSection')}} </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> {{__('admin/tags.addSection')}} </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -44,29 +44,18 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.brands.store')}}"
+                                              action="{{route('admin.tags.store')}}"
                                               method="POST"
-                                               enctype="multipart/form-data">
+                                              enctype="multipart/form-data">
                                             @csrf
 
-                                            <div class="form-group">
-                                                <label> صوره الماركة </label>
-                                                <label id="projectinput7" class="file center-block">
-                                                    <input type="file" id="file" name="photo">
-                                                    <span class="file-custom"></span>
-                                                </label>
-                                                @error('photo')
-                                                <span class="text-danger">{{$message}}</span>
-                                                @enderror
-                                            </div>
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> بيانات الماركة التجارية </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> {{__('admin/bands.name')}}
+                                                            <label for="projectinput1">{{__('admin/tags.name')}}
                                                             </label>
                                                             <input type="text" id="name"
                                                                    class="form-control"
@@ -78,37 +67,22 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group mt-1">
-                                                            <input type="checkbox" value="1"
-                                                                   name="is_active"
-                                                                   id="switcheryColor4"
-                                                                   class="switchery" data-color="success"
-                                                                   checked />
-                                                            <label for="switcheryColor4"
-                                                                   class="card-title ml-1">{{__('admin/bands.status')}}  </label>
 
-                                                            @error("is_active")
-                                                            <span class="text-danger">{{$message }}</span>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">{{__('admin/tags.linkName')}}
+                                                            </label>
+                                                            <input type="text" id="name"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   value="{{old('slug')}}"
+                                                                   name="slug">
+                                                            @error("slug")
+                                                            <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
 
-                                                    {{--     <div class="col-md-6">
-                                                              <div class="form-group">
-                                                                  <label for="projectinput1"> اسم بالرابط
-                                                                  </label>
-                                                                  <input type="text" id="name"
-                                                                         class="form-control"
-                                                                         placeholder="  "
-                                                                         value="{{old('slug')}}"
-                                                                         name="slug">
-                                                                  @error("slug")
-                                                                  <span class="text-danger">{{$message}}</span>
-                                                                  @enderror
-                                                              </div>
-                                                          </div>
-                                                          --}}
 
 
                                                 </div>

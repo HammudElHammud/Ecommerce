@@ -53,7 +53,7 @@ Route::group(
             Route::get('changeStatus/{id}','MainCategoriesController@changeStatus') -> name('admin.maincategories.status');
 
         });
-        ######################### Begin Main Categoreis Routes ########################
+        ######################### Begin Main Brands Routes ########################
         Route::group(['prefix' => 'brands'], function () {
             Route::get('/','BrandsController@index') -> name('admin.brands');
             Route::get('create','BrandsController@create') -> name('admin.brands.create');
@@ -64,7 +64,22 @@ Route::group(
             Route::get('changeStatus/{id}','BrandsController@changeStatus') -> name('admin.brands.status');
 
         });
-        ######################### End  Main Categoris Routes  ########################
+        ######################### End  Main Brands Routes  ########################
+
+
+        ######################### Begin Main Tags Routes ########################
+        Route::group(['prefix' => 'tags'], function () {
+            Route::get('/','TagsController@index') -> name('admin.tags');
+            Route::get('create','TagsController@create') -> name('admin.tags.create');
+            Route::post('store','TagsController@store') -> name('admin.tags.store');
+            Route::get('edit/{id}','TagsController@edit') -> name('admin.tags.edit');
+            Route::post('update/{id}','TagsController@update') -> name('admin.tags.update');
+            Route::get('delete/{id}','TagsController@destroy') -> name('admin.tags.delete');
+            Route::get('changeStatus/{id}','TagsController@changeStatus') -> name('admin.tags.status');
+
+        });
+        ######################### End  Main Brands Routes  ########################
+
 
         Route::group(['prefix' => 'Sub_categories'], function () {
             Route::get('/','SubCategoriesController@index') -> name('admin.subcategories');

@@ -15,7 +15,10 @@ return [
 
     'main sections' => ' Main Sections',
     'sub sections' => ' Sub Sections',
+    'fatherName' => ' Main Section',
     'main ' => ' Main ',
+    'selectSection ' => ' Select Main Section ',
+    'pleaseSelect ' => ' Please Select Main Section ',
     'all sections' => ' All Sections',
     'sub all sections' => ' All Sub Sections',
     'name' => ' Name',
