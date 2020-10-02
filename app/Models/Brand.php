@@ -42,6 +42,10 @@ class Brand extends Model
 
 
 
+    public function scopeActive($query){
+        return $query -> where('is_active',1)->get();
+    }
+
     public function getActive(){
         return  $this -> is_active  == 0 ?  __('admin/bands.notActive') : __('admin/bands.Active') ;
     }
