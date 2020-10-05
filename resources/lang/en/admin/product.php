@@ -35,6 +35,22 @@ return [
     'sub all sections' => ' جميع الاقسام الفرعية',
     'name' => ' الاسم ',
     'price' => ' Price ',
+    'productPrice' => 'Product Price',
+    'specialPrice' => 'Special Price',
+    'PriceType' => 'Price Type',
+    'startDate' => 'Start Date',
+    'endDate' => 'End Date',
+    'WarehouseManagement' => 'Warehouse Management',
+    'ProductCode' => 'Product Code',
+    'TrackTheWarehouse' => 'Track The Warehouse',
+    'ProductStatus' => 'Product Status',
+    'available' => ' Available ',
+    'unavailable' => 'Unavailable',
+    'availableProduct' => 'Available Product',
+    'unavailableProduct' => 'Unavailable Product',
+    'quantity' => 'Quantity',
+
+
 
     'image' => 'صوره ماركة',
     'measures' => ' الإجراءات',

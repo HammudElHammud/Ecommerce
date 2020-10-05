@@ -67,8 +67,14 @@
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
+                                                                <a href="{{route('admin.products.price',$product -> id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/product.price')}}</a>
 
+                                                                <a href=""
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('admin/product.image')}}</a>
 
+                                                                <a href="{{route('admin.products.stock',$product -> id)}}"
+                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">المستودع</a>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -92,4 +98,18 @@
         </div>
     </div>
 
+@stop
+
+@section('script')
+
+    <script>
+        $(document).on('change','#manageStock',function(){
+            alert($(this).val());
+            if($(this).val() == 1 ){
+                $('#qtyDiv').show();
+            }else{
+                $('#qtyDiv').hide();
+            }
+        });
+    </script>
 @stop
